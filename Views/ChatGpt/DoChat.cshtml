@@ -1,0 +1,108 @@
+﻿@model ChatGptApp.Models.ChatGptModel
+
+<div>
+    <h1>Chat GPT App</h1>
+    <hr />
+    @if (Model.IsError) { 
+        <div><strong>Error parsing the data, reasons: </strong></div>
+        <hr />
+        <div>
+            @Model.ErrorMsg
+        </div>
+    }
+     else{
+<div>
+    @using (Html.BeginForm("Post", "ChatGpt", new { id = "form_nl_chat" }, FormMethod.Post, new { }))
+    {
+        <input type="hidden" name="fhController" value="ChatGptController" />
+        <input type="hidden" name="fhAction" value="Post" />
+
+        <div>
+            @Html.TextAreaFor(model => model.Input, new { Cols = "60", Rows = "8", Placeholder = "Enter your text here" }) <br />
+            Proces Image? @Html.CheckBoxFor(model => model.ProcessImage)
+        </div>
+        <div>
+            <input type="submit" value="Process" />
+        </div>
+        <div>
+            @Html.TextAreaFor(model => model.Response, new { ReadOnly = true, Cols = "100", Rows = "15", Name="txtResponse", Id= "txtResponse" })
+        </div>
+        <div>
+            <input name="btnSaveItem" id="btnSaveItem" type="button" value="Create Item to save the response"/>
+        </div>
+        <hr />
+        <p>
+            <i>You can configure the size, numbers, item and media location via Sitecore</i><br />
+            <i>Check the settings item here..</i>
+        </p>
+        if (Model.ProcessImage)
+        {
+            <div>
+                <input name="btnSaveImage" id="btnSaveImage" type="button" value="Save Image to Media Library" />
+            </div>
+
+            <div>
+                @foreach (var img in Model.ImageUrls)
+                {
+                    <div>
+                        <img src="@img.url" height="512" width="512" />
+                        <input type="hidden" name="txtImage" id="txtImage"  value="@img.url"/>
+                    </div>
+                }
+            </div>
+        }
+
+
+    }
+</div>        
+    } 
+    
+</div>
+<div class="row">
+    <span id="loadingControl" name="loadingControl" style="color:orangered; display: none; font-size: larger">Loading....</span>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#btnSaveItem").on('click', function (e) {
+            e.preventDefault();
+            $("#loadingControl").show();
+            $.ajax({
+                url: "/chat/chatgpt/saveitem",
+                type: "POST",
+                data: $("#txtResponse").val(),
+                context: this,
+                success: function (result) {
+                    console.log("success", result);
+                    alert("Data is saved...")
+                    $("#loadingControl").hide();
+
+                },
+                error: function (data) {
+                    $("#loadingControl").hide();
+                }
+            });
+        });
+
+        $("#btnSaveImage").on('click', function (e) {
+            e.preventDefault();
+            $("#loadingControl").show();
+            $.ajax({
+                url: "/chat/chatgpt/saveimage",
+                type: "POST",
+                data: { "ImageUrls":   "'" + $("#txtImage").val() + "'"  },
+                context: this,
+                success: function (result) {
+                    console.log("success", result);
+                    alert("Data is saved...")
+                    $("#loadingControl").hide();
+
+                },
+                error: function (data) {
+                    $("#loadingControl").hide();
+                }
+            });
+        });
+    });
+</script>

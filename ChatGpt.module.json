@@ -1,0 +1,16 @@
+{
+  "namespace": "ChatGpt.module",
+  "items": {
+	"include": [
+	     {
+			"name": "template",
+			"path": "/sitecore/templates/Feature/ChatGpt",
+			"scope": "ItemAndDescendants"
+		},
+		{
+			"name": "settings",
+			"path": "/sitecore/content/Home/Settings"
+		}
+	]
+  }
+}
