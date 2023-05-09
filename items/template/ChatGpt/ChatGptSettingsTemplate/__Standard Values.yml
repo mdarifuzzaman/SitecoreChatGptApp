@@ -1,0 +1,61 @@
+﻿---
+ID: "3bbf54d8-e638-4d3b-89e7-377163168434"
+Parent: "70a39c63-aa54-4660-a967-0e28933a8536"
+Template: "70a39c63-aa54-4660-a967-0e28933a8536"
+Path: /sitecore/templates/Feature/ChatGpt/ChatGptSettingsTemplate/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "094c699c-4d7a-49b3-acb5-ab3f9592749b"
+      Hint: ImageSize
+      Value: 1024x1024
+    - ID: "1d5e33ae-13d3-4b42-aa09-11094f7094f2"
+      Hint: ImageChatUrl
+      Value: "https://api.openai.com/v1/images/generations"
+    - ID: "1e7ab36f-27b9-4f84-80ba-0dbe3631be72"
+      Hint: ChatUrl
+      Value: "https://api.openai.com/v1/chat/completions"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230508T094006Z
+    - ID: "3254dfc9-18ae-478c-8f49-55ab5ff819f9"
+      Hint: ItemSaveTemplateId
+      Value: "{A1C44591-80AB-4975-939C-95CE6663E062}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "690a7878-5718-4c39-a3cf-9cf40ab98d25"
+      Hint: NumberOfImages
+      Value: 1
+    - ID: "7997b1d4-3f15-4a4e-8dc4-ef2a2e87c908"
+      Hint: GptModel
+      Value: "gpt-3.5-turbo"
+    - ID: "89a67217-526d-4fee-9014-826b6ff51505"
+      Hint: NumberOfMessages
+      Value: 1
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f3bdb2a1-88dd-433a-906a-7a5073b0acfd"
+    - ID: "9772b258-7631-443e-834f-206dcce8636d"
+      Hint: MediaPath
+      Value: "{90AE357F-6171-4EA9-808C-5600B678F726}"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230508T094225Z
+    - ID: "e8c3b4e1-f312-4804-ad63-2c5af7237c2b"
+      Hint: Token
+      Value: ""
+    - ID: "f3792000-4f49-4409-babc-cd028becd4be"
+      Hint: ItemSavedPath
+      Value: "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"

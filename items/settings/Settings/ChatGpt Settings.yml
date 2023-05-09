@@ -1,0 +1,32 @@
+﻿---
+ID: "10a2425b-b6e0-432a-a8e9-c9dbcb7d94f1"
+Parent: "5c9b1864-6414-443c-b7aa-c1283921e8fd"
+Template: "70a39c63-aa54-4660-a967-0e28933a8536"
+Path: /sitecore/content/Home/Settings/ChatGpt Settings
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230508T094350Z
+    - ID: "3254dfc9-18ae-478c-8f49-55ab5ff819f9"
+      Hint: ItemSaveTemplateId
+      Value: "{A1C44591-80AB-4975-939C-95CE6663E062}"
+    - ID: "690a7878-5718-4c39-a3cf-9cf40ab98d25"
+      Hint: NumberOfImages
+      Value: 1
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "958450e2-661f-42c4-aa4d-c89a4348e68b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230508T231803Z
+    - ID: "f3792000-4f49-4409-babc-cd028becd4be"
+      Hint: ItemSavedPath
+      Value: "{B2BE9636-4293-42CD-9DED-8B8ADF7BC1A0}"
