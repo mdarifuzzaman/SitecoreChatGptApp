@@ -14,6 +14,12 @@
 			"name": "settings",
 			"path": "/sitecore/content/Home/Settings",
 			"allowedPushOperations": "CreateUpdateAndDelete"
+		},
+		{
+			"name": "LaunchpadButton",
+			"path": "/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Tools/ChatGpt",
+			"allowedPushOperations": "CreateUpdateAndDelete",
+			"database": "core"
 		}
 	]
   }
